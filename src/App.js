@@ -12,13 +12,15 @@ import Login from "./pages/auth/Login";
 import { useSelector } from "react-redux";
 import Practise from "./components/Practise";
 import Home from "./pages/home/Home";
-import PrchPds from "./PrchPds";
+// import PrchPds from "./PrchPds";
 import FirebaseUpload from "./firebase";
 import PurchasedProducts from "./pages/purchasedProducts/PurchasedProducts";
 import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
 import OtherUsers from "./pages/profile/OtherUsers";
 import Test from "./Test";
+import AboutUs from "./pages/about_us/AboutUs.js";
+import  Workshop  from "./pages/Workshop/Workshop.js";
 
 function App() {
   const user = useSelector((state) => state.user.currentUser);
@@ -40,6 +42,8 @@ function App() {
         <Route path="/Razorpayy" element={<Razorpayy />} />
         <Route path="/practise" element={<Practise />} />
         <Route path="/prchPds" element={<PurchasedProducts />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/Workshop" element={<Workshop />} />
       </Routes>
     </BrowserRouter>
   );
